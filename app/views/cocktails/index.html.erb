@@ -1,0 +1,43 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+
+<div class="container ">
+
+  <h1>Voici notre carte des cocktails 😁</h1>
+
+
+<div class="container d-flex justify-content-around">
+  <div class="row flex-nowrap bd-highlight">
+    <div class="d-flex flex-sm-fill align-content-between flex-wrap">
+      <% @cocktails.each do |cocktail| %>
+      <div class="card text-center col-sm" style="width: 18rem;">
+        <div class="mx-auto"><%= image_tag "mojito.jpg", alt: "Le Wagon", width: 200 %></div>
+        <!-- <img src="assets/images/mojito.jpg" class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= cocktail.name %>
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button name="_method" type="hidden" value="delete" class="btn btn-danger"> Delete</button>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="alert alert-dark" role="alert">
+  <%= link_to 'ajouter un cocktail', new_cocktail_path %>
+</div>
+
+
+</div>
+
+
