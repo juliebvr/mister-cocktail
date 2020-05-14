@@ -2,11 +2,14 @@ class IngredientsController < ApplicationController
   def index
     @ingredients = Ingredient.all
   end
+
   def show
   end
+
   def new
     @ingredient = Ingredient.new
   end
+
   def edit
   end
 
